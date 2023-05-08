@@ -23,7 +23,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	while (*(text_content + text_len))
 		text_len++;
 
-	/* Open file for appending, exit if it doesn't exist or write permission is denied */
 	fd = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
 		return (-1);
